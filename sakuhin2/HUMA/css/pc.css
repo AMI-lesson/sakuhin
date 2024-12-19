@@ -1,0 +1,437 @@
+@charset "UTF-8";
+
+/*共通部分
+-------------------------------------------------*/
+* {
+	margin: 0px;
+	padding: 0;
+}
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
+	line-height: 1.7;
+	color: #432;
+	background-image: url(../image/background.jpg);
+	min-width: 800px;
+
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 400px;
+}
+
+h1 {
+	text-align: center;
+	font-family: "Yusei Magic", sans-serif;
+	font-weight: 100;
+	margin-bottom: 40px;
+}
+
+h2 {
+	text-align: center;
+	font-family: "Yusei Magic", sans-serif;
+	font-weight: 100;
+}
+
+section {
+	margin: 25px;
+	padding: 5px;
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+a:link {
+	color: black;
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #0bd;
+	text-decoration: none;
+}
+
+/*header
+---------------------------------------------------*/
+header {
+	background-color: #d0e39b;
+	height: 90px;
+}
+
+img.logo {
+	margin: 15px;
+	padding: 10px;
+}
+
+.l-gnav {
+	display: flex;
+	text-transform: uppercase;
+	margin: 30px;
+	list-style: none;
+}
+
+.l-gnav li {
+	margin-left: 30px;
+}
+
+.l-gnav a {
+	color: #432;
+}
+
+.l-gnav a:hover {
+	color: #0bd;
+}
+
+.l-header {
+	justify-content: space-between;
+}
+
+#navControl {
+	display: none;
+}
+
+.l-header__inner__logo {
+	float: left;
+}
+
+.l-gnav {
+	float: right;
+}
+
+.l-header__nav {
+	display: block !important;
+}
+
+/*footer
+----------------------------------------------------------*/
+footer {
+	background: #d0e39b;
+	text-align: center;
+	padding: 26px;
+}
+
+footer {
+	color: #432;
+	font-size: 0.875%;
+}
+
+/*main(index.html)
+-----------------------------------------------------------------------*/
+main {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.gruop1 {
+	text-align: center;
+}
+
+.main-visual {
+	margin-top: 40px;
+	width: 770px;
+	max-width: none;
+}
+
+.s1 {
+	width: 100%;
+	height: 40%;
+	margin-bottom: 15%;
+}
+
+.g2 {
+	margin: 20px;
+}
+
+.img1 {
+	float: left;
+	margin-right: 20px;
+}
+
+#p1 {
+	clear: both;
+}
+
+.img2 {
+	float: right;
+	margin-left: 20px;
+}
+
+.g3 {
+	margin: 20px;
+}
+
+#p2 {
+	clear: both;
+}
+
+.s2 {
+	width: 100%;
+	height: 50%;
+	margin-bottom: 15%;
+	margin-top: 10%;
+}
+
+.s3 {
+	width: 100%;
+	height: 50%;
+	margin-bottom: 15%;
+	margin-top: 10%;
+}
+
+.g4 {
+	margin: 20px;
+}
+
+.img3 {
+	float: left;
+	margin-right: 20px;
+}
+
+#p3 {
+	clear: both;
+}
+
+/*main(shop.html)
+-----------------------------------------------------------------------*/
+table,
+table th,
+table td {
+	border: 1px solid rgb(83, 205, 97);
+	border-collapse: collapse;
+	padding: 10px;
+	font-size: 1.125rem;
+	font-weight: normal;
+}
+
+table th {
+	border-bottom: #fff 1px solid;
+	background-color: rgba(100, 224, 148, 1);
+}
+
+table td {
+	background-color: white;
+}
+
+table {
+	width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+
+section {
+	overflow: hidden;
+	margin-top: 50px;
+}
+
+.location-map {
+	text-align: center;
+}
+
+.shop-table {
+	width: 100%;
+}
+
+.shop-map {
+	width: 800px;
+	height: 400px;
+	border: none;
+}
+
+iframe {
+	width: 100%;
+	height: 400px;
+	border: none;
+}
+
+/*main(family.html)
+-----------------------------------------------------------------------*/
+.grid {
+	display: grid;
+	gap: 26px;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-top: 2%;
+	margin-bottom: 50px;
+}
+
+.gridimg {
+	height: 200px;
+	width: 250px;
+	object-fit: cover;
+}
+
+.heading {
+	position: relative;
+	width: 50%;
+	font-size: 30px;
+	border-bottom: 5px solid #c7c7c7;
+}
+
+.heading::after {
+	content: '';
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 70px;
+	height: 5px;
+	background-color: rgb(83, 205, 97);
+}
+
+/*main(kakaku.html)
+-----------------------------------------------------------------------*/
+.kakaku-table {
+	border: 1px solid rgb(83, 205, 97);
+	border-collapse: collapse;
+	padding: 10px;
+	text-align: center;
+	width: 250px;
+	height: 40px;
+	margin: 5px auto;
+	padding: 10px;
+	font-size: 1.125rem;
+	font-weight: normal;
+}
+
+.kakau-table th {
+	border-bottom: #fff 1px solid;
+	background-color: rgba(100, 224, 148, 1);
+	width: 30%;
+}
+
+.kakaku-table td {
+	background-color: white;
+}
+
+.pc {
+	width: 250px;
+	height: 200px;
+	margin: 5px;
+	object-fit: cover;
+}
+
+.kakaku-p {
+	text-align: center;
+}
+
+/*main(form.html)
+-----------------------------------------------------------------------*/
+.form-table,
+.form-table th,
+.form-table td {
+	border: 1px solid rgb(83, 205, 97);
+	border-collapse: collapse;
+	padding: 10px;
+	font-size: 1.125rem;
+	font-weight: normal;
+	margin-bottom: 30px;
+}
+
+.form-table th {
+	border-bottom: #fff 1px solid;
+	background-color: rgba(100, 224, 148, 1);
+}
+
+.form-table td {
+	background-color: white;
+	padding: 13px;
+}
+
+.form-table {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.button {
+	display: inline-block;
+	border-radius: 10px;
+	font-size: 18px;
+	text-align: center;
+	padding: 17px 40px;
+	background: rgb(83, 205, 97);
+	transition: .3s;
+	box-shadow: 6px 6px 6px #aaa;
+	border: 4px solid rgb(255 255 255);
+	color: #fff;
+	font-weight: 700;
+}
+
+.button:hover {
+	box-shadow: none;
+	color: black;
+	background: rgb(83, 205, 97);
+}
+
+.formh1 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.textbox {
+	font-size: 16px;
+	padding: 5px;
+	border-radius: 10px;
+	width: 350px;
+	border-color: rgb(83, 205, 97);
+	box-shadow: none;
+
+}
+
+.textsmall {
+	font-size: 16px;
+	padding: 5px;
+	border-radius: 10px;
+	width: 140px;
+	border-color: rgb(83, 205, 97);
+	box-shadow: none;
+
+}
+
+.submit {
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 60px;
+}
+
+/*main(privacy.html)
+-----------------------------------------------------------------------*/
+.privacy-h2{
+    margin: 0;
+}
+.privacy-h1{
+    margin: 0;
+    text-align: center;
+}
+.privacy-7 ol{
+    margin-left: 20px;
+}
+.privacy-list-li{
+    margin-bottom: 20px;
+}
+.privacy-list-ol{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+.privacy-list-li-ol{
+    margin-top: 20px;
+    font-size: 13px;
+}
+.privacy-7 li{
+    margin-bottom: 10px;
+}
+.privacy-list-li-ul{
+    margin-left: 40px;
+}
