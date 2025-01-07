@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>卒論作品カービィ制作</title>
+    <link rel="stylesheet" href="sp.css" media="screen and (max-width: 768px)">
+    <link rel="stylesheet" href="pc.css" type="text/css" media="screen and (min-width: 768px)">
+    <link rel="icon" type="img/png" href="image1/favicon.png">
+    
+</head>
+<body>
+    <header>
+        <h1><a href="index.html"></a></h1>
+        <div class="hamburger-menu">
+            <input type="checkbox" id="menu-btn-check">
+            <label for="menu-btn-check" class="menu-btn"><span></span></label>       
+            <div class="menu-content">                        
+                <ul class="menu-ul">
+                    <li class="button-49">卒論作品カービィ制作</li>
+                    <li class="button-49">初心者向けモデリング制作</li>
+                    <li class="button-49">blender用語解説</li>
+                    <li class="button-49">blender操作方法</li>
+                </ul>           
+            </div>
+        </div>            
+    </header>
+    
+    <main>
+        
+        <div class="gruop1">
+            <img class="main_visual" src="image1/main_visual_sakuhin3.png">
+        </div>
+        <h1 class="heading">[Blnder]を使ってカービィを作る初心者にもわかりやすく解説</h1>
+        
+        <section class="mokuzi">                
+            <h2>目次</h2>
+            <ul>
+                <li><a href="#アバター解説">アバターとは</a></li>
+                <div class="li">
+                    <ul>
+                        <li>2Dアバターの特徴</li>
+                        <li>3Dアバターの特徴</li>
+                    </ul>
+                </div>
+                <li><a href="#アバター制作">アバター制作</a></li>
+                <div class="li">
+                    <ul>
+                        <li>アバター制作について</li>
+                        <li>アバター制作アプリ</li>
+                        <li>アバターの作り方</li>
+                        <li>カービィを作ってみよう</li>
+                    </ul>
+                </div>
+                <li><a href="#用語">blenderやアバター制作で使われる用語解説</a></li>
+            </ul>
+        </section>
+        
+        <section class="section1">
+            <div class="midasi">
+                <h2 class="heading-22"><a id="アバター解説">アバターとは</a> </h2>
+            </div>
+            
+            <div class="s1">                    
+                <p>ゲームやインターネットなどの仮想空間上で出現する、
+                    自身の分身となる存在やキャラクターのことを指す。<br>
+                    また、オンラインゲームで自分のキャラクターを作成したり、
+                    SNSでプロフィール写真を設定したりするときに使う。<br>    
+                </p>
+                <p>アバターの特徴として、「違う自分になりきれる」ところがある。
+                    現実では再現が難しいことでも、アバターを利用すれば簡単にかなえられる。
+                </p>
+                <p>アバターには2次元のキャラクターを利用した2Dのアバターと、
+                    3DCGで作成された立体的なキャラクターの3Dアバターがある。
+                </p>
+                
+                <div class="content">
+                    <div class="content-blockA">
+                        <h2 class="mt1 ">2Dアバターの特徴</h2>
+                        <div class="blockA">
+                            <h3>メリット</h3>
+                            <div class="fl">
+                                <p>1枚の画像を使うだけなら簡単に用意できる<br>
+                                    デフォルメ調の可愛いキャラクター表現が得意<br>
+                                    自身の好みや趣味をアピールできる
+                                </p>
+                            </div>
+                            <h3>デメリット</h3>
+                            <div class="fl">
+                                <p>イラストの場合は描く手間がかかる<br>
+                                    表情の違いなどはその都度描いて用意しなければならない<br>
+                                    動きをつける場合はパラパラ漫画のように多くの枚数が必要になる<br>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="content-blockB">
+                        <h2 class="mt1 ">3Dアバターの特徴</h2>                        
+                        <div class="blockB">
+                            <h3>メリット</h3> 
+                            <div class="fl">
+                                <p>立体感、躍動感を表現できる<br>
+                                    複雑な表情や動きが再現可能<br>
+                                    細かい衣装や装飾品を着せることができる<br>
+                                    一度3Dモデルを作ってしまえば流用し動きをつけるだけなので、
+                                    作業工程としてはイラストを描くよりも楽になる<br>
+                                    目の大きさや瞳の色など、細かな部分の設定までカスタマイズできる
+                                </p>
+                            </div>
+                            <h3>デメリット</h3>
+                            <div class="fl">
+                                <p>作るのに時間がかかる<br>
+                                    3DCGのモデリングの技術が必要になる<br>
+                                    データー容量が大きくなる<br>
+                                    運営する側も大きなサーバーが必要になる<br>
+                                </p>
+                            </div>
+                        </div>    
+                    </div>
+                </div>
+            </section>
+            
+            
+            <section class="section2">
+                <div class="midasi">
+                    <h2 class="heading-22"><a id="アバター制作">アバター制作</a></h2>
+                </div>                
+                <h2 class="mt1 ">アバター制作について</h2>
+                <div class="contentC">
+                    <h3>1. イラストにアバターのイメージを書き起こす</h3>
+                    <p>全身の立ち絵、正面から見た顔、横から見た顔、服のデザインの細部まで詳細に描き起こす。</p>
+                    <h3>2. 3Dソフトでアバターを作成する</h3>
+                    <p>3Dソフトを使用し、アバターのベースとなる3Dモデルを作成する。
+                        この作業をモデリングという頂点と頂点を線でつなぐポリゴンを組み合わせて3Dモデルを作成していく。
+                        イラストと違い、高さx幅x奥行きという3次元で考えないといけない。
+                    </p>
+                    <h3>3. テクスチャーを張る</h3>
+                    <p>テクスチャーとは3DCDにおいて、材質の質感を表現するために使われる画像のこと<br>
+                        CDモデルだけではただの立方体でしかないが、木目調のテクスチャーを張れば温かみのある木製の箱に、
+                        紙のテクスチャーを張れば軽そうな紙製の箱に、金属のテクスチャーを張れば重厚感のある金属製の箱に早変わりする。
+                    </p>
+                    <h3>4. モーションをつける</h3>
+                    <p>モーションとは動きのこと<br>
+                        手を動かしたり、走ったりする動きを一つ一つ付けていく
+                        表情もつけていく
+                    </p>
+                </div>
+                
+                <h2 class="mt1 ">アバター制作アプリ</h2>
+                
+                <section id="section2_1">
+                    <div class="s2_1">
+                        <h3>1. ZEPETO（ゼペット）</h3>
+                        <div class="g2_1">
+                            <div class="pc2_1">
+                                <img  class="img1" src="image1/zeppeto.png" alt="ap1" width="400px">
+                            </div>
+                            <div class="p2_1">
+                                <p>自分に似ているキャラクター的なアバター作成ができる無料アプリ（一部有料）。<br>
+                                    写真加工アプリのSNOWが提供するアプリで、写真をもとに3Dアバターを作り、
+                                    衣装を自由に変更したり、アバター同士で写真を撮ったりして楽しる。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="section2_2">
+                    <div class="s2_2">   
+                        <h3>2. LINEアバター</h3>
+                        <div class="g2_2">
+                            <div class="pc2_2">
+                                <img class="img2" src="image1/lineapuli.jpg" alt="ap2" width="400px">
+                            </div>
+                            <div class="p2_2">                           
+                                <p>LINEアバターはLINEアプリのカメラで撮った写真から、無料でアバター作成ができるアプリ。<br>
+                                    作成したアバターは、LINEのプロフィール画像にしたり、背景画像に使用したりして若い世代を中心に使われている。
+                                </p>
+                            </div> 
+                        </div>
+                    </div> 
+                </section>
+                
+                <section id="2_3">
+                    <div class="s2_3">
+                        <h3>3. Blender</h3>
+                        <div class="g2_3">
+                            <div class="pc2_3">
+                                <img class="img3" src="image1/blender.png" alt="ap3" width="400px">
+                            </div>
+                            <div class="p2_3">
+                                <p>
+                                    モデリングをはじめ、アニメーション制作やレンダリング、
+                                    各アプリ向けの出力といった工程をワンストップで行うことができる3DCGソフト。
+                                    <br>無料で使用することが出来る。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section id="s2_4">
+                    <div class="s2_4">
+                        <h3>4. Maya</h3>
+                        <div class="g2_3">                    
+                            <div class="p2_4">
+                                <img class="img4" src="image1/maya1.jpg" alt="ap4" width="400px" height="200px">
+                            </div>
+                            <div class="p2_4">
+                                <p>3DCGソフトウェア。<br>
+                                    3Dアニメーション、3Dアニメーションキャラクターの作成、モデリング、リギング、<br>
+                                    シミュレーション、レンダリング、モーション・グラフィックスと作ることが出来る
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+                <srction id="s2_5">                
+                    <h2 class="mt1 ">アバターの作り方</h2>
+                    <div class="s2_5_1">
+                        <h3>Blenderでキャラクターの作り方</h3>
+                        <ol>
+                            <li>モデリング（体・手・足）</li>
+                            <li>モデリング（表情）</li>
+                            <li>マテリアル</li>
+                            <li>撮影セッティング</li>
+                        </ol>
+                        
+                    </div>
+                    
+                    <h2 class="mt1 ">カービィを作ってみよう！</h2>
+                    
+                    <div class="contentD">
+                        <h3>完成例</h3>
+                        <img  class="c1" src="image1/kanserei.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>1. モデリング（体）</h3>
+                        <div class="yohaku">                     
+                            <p class="mt2">胴体から作っていく。</p>                       
+                            <p>形状は完全な球なので、デフォルトで置いてある立方体を消してから球を新しく作ります</p>
+                        </div>
+                        <img src="image1/md1.jpg" alt="" width="500px">
+                        <div class="yohaku">
+                            <p>球はこの座標におきます。</p>
+                        </div>
+                        <img src="image1/trans1.png" alt="" width="200px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>2. モデリング（腕）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">腕を作る</p>                    
+                            <p>腕の形状は球を少し引き延ばした楕円体です。新しく球を生成します。<br>この腕の座標は</p>
+                        </div>
+                        <img src="image1/trans2.png" alt="" width="200px">
+                        <div class="yohaku">
+                            <p>です。今作った片腕をShift+Dで複製しますそしてScaleはそのままの値にしつつ、
+                                Locationのxの値を正負逆に、Rotationのyの値を正負逆にします。
+                                図形はこの場所に置きます。
+                            </p>
+                        </div>
+                        <img src="image1/trans3.png" alt="" width="200px"><br>
+                        <img src="image1/md2.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>3. モデリング（足）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">足を作る</p>                    
+                            <p> まずShift+Aで新しく立方体を作ります。
+                                さきほど作ったカービィの胴体と腕と重ならないように、
+                                とりあえずこの立方体はz軸の負の方向に適当に動かしておきます。
+                                この立方体を選択した状態でプロパティウィンドウ→Modifier→Add Modifier→Subdivision Surfaceを選択します。
+                                そしてViewの値を3にします。<br>
+                                次にEdit Modeに変更し、Face Selectにします。
+                                Sキー→Zキーで立体をz軸方向に縮小させます。
+                                立体のy軸負の面を選択した状態でSキーを押し、面の大きさを縮小します。
+                                立体のz軸負の面を選択した状態でEキーを押し、そのままEnterキーで決定します。これは面を押し出す操作です。<br>
+                            </p>
+                            <p>
+                                あとはRotationやScaleを適宜微調整して、さきほど作ったカービィの胴体の下に脚を移動させます。
+                                脚をShift+Dで複製して、もう片方の脚も作ります。
+                                最後にTキー→Shading→Smoothで表面を滑らかにした結果が下になります。
+                            </p>
+                        </div>
+                        <img src="image1/md3.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>4. モデリング（表情・ベース）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">テスクチャマッピング</p>
+                            <p>
+                                まずは表情のベースを作ります。shift+Aで新しく平面を追加します。
+                                90°回転させスケールで小さくさせます。
+                                シュリンクラップをします。方法は、プロジェクト、スナップモードをサーフェイスの上にします。
+                                ターゲットに体のオブジェクトを選びます。
+                                オフセットの数値を少しづつ上げます。
+                                そうすることにより図形が滑らかに動くようになります。
+                            </p>
+                            <p>
+                                今の画面では図形がどうなっているのか分かりにくいため、カラーをランダムにします。
+                                この図形をベースに表情を作っていきます。
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>5. モデリング（表情・目）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">目を作る</p>
+                            <p>
+                                shift-Dでベースを複製します。ベースは非表示にしておきます。<br>
+                                編集モードに入り、sキーで縦と横の幅を調整して目の形を作ります。
+                                オブジェクトモードに戻り、ピポッドポイントを3Dカーソルに変更します。
+                                Rキーを2回を押すとロ位柔軟に回転します。
+                                ミラーモディファイアを使って位置を決めます。shiftキーを押しながら少しずつ調整していきます。
+                            </p>
+                        </div>
+                        <img src="image1/md4.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>6. モデリング（表情・ほっぺ）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">ほっぺを作る</p>
+                            <p>
+                                目の作り方と同じです。オブジェクトを再度表示させて、shift-dで複製させます。
+                                残りの動作は目の時と同じです。
+                            </p>
+                        </div>
+                        <img src="image1/md5.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>7. モデリング（表情・口）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">口を作る</p>
+                            <p>
+                                ベースオブジェクトをshift-Dでコピーします。口は逆三角形のような形をしています。<br>
+                                下の頂点をスケールで小さくすると作れます。
+                                口は一つなのでミラーは使いません。<br>
+                                すべてのパーツに回転とスケールをかけておきます。
+                            </p>
+                        </div>
+                        <img src="image1/md6.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>8. モデリング（表情・目のハイライト）</h3>
+                        <div class="yohaku">
+                            <p class="mt2"> 目のハイライトを作る</p>
+                            <p>
+                                目のオブジェクトを複製します。編集モードでスケールを小さくします。
+                                オブジェクトモードで位置を調整します。<br>
+                                シュリンクラップのオフセットを少し上げます。
+                            </p>
+                        </div>
+                        <img src="image1/md7.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>9. モデリング（表情・目の下の部分）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">目の下の部分を作る</p>
+                            <p>
+                                ベースオブジェクトから作ります。ベースオブジェクトを複製します。
+                                編集モードに入ります。Ctrl+Rを押して一度クリックした後、場所を決める段階で右クリックを押すと
+                                ちょうど真ん中にループカットが設定されます。<br>
+                                そのまま追加された頂点をGZで下に動かして、形を変えます。
+                                スケールで幅と高さを調整し、目の下に配置します。<br>
+                                オフセットの数値を少し上げて、目のオブジェクトよりも上にもっていきます。<br>
+                                これでモデリングは完了です。
+                            </p>
+                        </div>
+                        <img src="image1/md8.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>10. マテリアル（体）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">マテリアルで体に色を付ける</p>
+                            <p>
+                                シェーディングタブに移動します。体以外のオブジェクトを非表示にしておきます。<br>
+                                体を選択して新規をクリックします。ベースカラーをクリックして好きな色を設定します。
+                                今回はこの色に設定しました。<br>
+                                
+                            </p>                
+                            <p>
+                                今見ているが画面は仮の状態です。右上のシェーディングモードをクリックします。<br>
+                                これが実際にレンダリングされる画面です。今は照明がないので薄暗くなっています。<br>
+                                照明を設定する方法はいくつかありますが、今回は環境テスクチャを使った照明を設定します。
+                            </p>
+                        </div>
+                        <img src="image1/rendaring.png" alt="" width="500px">
+                        <div class="yohaku">
+                            <p>
+                                レンダ―エンジンをサイクルズにします。サイクル図のほうがeeveeよりきれいだからです。
+                                適用サンプリングとデノイズにチェックを入れるとノイズが減りさらにきれいになります。<br>
+                                ワールドプロパティタブに戻り、アンビエントオクルージョンにチェックを入れます。
+                                左上のマテリアルをワールドに変えます。先ほど設定した環境テスクチャがあります。
+                                追加からマッピングノードとテクスチャ座標を出します。
+                                生成をベクトルにつないで、ベクトルをベクトルに使います。
+                                Z軸の回転を90度にします。
+                                放射の強さは1.5にすると、柔らかくて明るいピンクが作れます。
+                            </p>
+                        </div>
+                        <img src="image1/m1.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>11.マテリアル（手）</h3>
+                        <div class="yohaku">
+                            <p class="mt2"> 10で作ったものを使って手にマテリアルで色を付ける</p>
+                        </div>
+                        <img src="image1/m2.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>12. マテリアル（足）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">マテリアルで足に色を付ける</p>
+                            <p>足には新しいマテリアルを作り、赤色を設定します。</p>
+                        </div>
+                        <img src="image1/m3.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>13. マテリアル（黒目）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">マテリアルで目に色を付ける</p>
+                            <p>目には新しいマテリアルを作り、黒色を設定します。</p>
+                        </div>                    
+                        <img src="image1/m4.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>14. マテリアル（ほっぺ）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">マテリアルでほっぺに色を付ける</p>
+                            <p>ほっぺには新しいマテリアルを作り、濃いピンクを設定します。</p>
+                        </div>                    
+                        <img src="image1/m5.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>15.マテリアル（ハイライト）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">マテリアルでハイライトに色を付ける</p>
+                            <p>ハイライトには新しいマテリアルを作り、白色を設定します。</p>                        
+                        </div>
+                        <img src="image1/m6.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>16.マテリアル（口）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">マテリアルで口に色を付ける</p>
+                            <p>口のマテリアルでは、ベロとそれ以外で色を変えます。
+                                グラデーションテクスチャとマッピング、それからテクスチャ座標を追加します。<br> 
+                                テクスチャ座標のUVをベクトルに繋げます。 
+                                Xの位置を0.5にしてグラデーションを球場にします。 
+                                カラーランプを追加します。リニアを一定に変えて、下のスライダーを動かしながらベロの先目を決めます 。
+                                そうしたら、色を変えて、ベースカラーに繋げます。<br> 
+                                これで口の中が出来ました。 
+                            </p>    
+                        </div>
+                        <img src="image1/m7.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>17.マテリアル（目の下）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">目の下のマテリアルを作る</p>
+                            <p>口のマテリアルのノードを選択して、Ctrl+Cでコピーします。
+                                目の下のオブジェクトを選択して新規をクリックして、Ctrl+Vで貼り付けます。
+                                カラーランプの一定をリニアに戻します。
+                                スライダーを両端に寄せます。
+                                一番左を黒にして、一番右を青にします。
+                                プラスボタンを押して、もう一つスライダーを追加します。
+                                ベースカラーとアルファにつなぎます。
+                                これでマテリアルは終わりです。<br>
+                            </p>                
+                        </div>
+                        <img src="image1/m8.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>18. 微調整</h3>
+                        <div class="yohaku">
+                            <p class="mt2">
+                                最後にオブジェクトのいらないが毛を消します。
+                                顔のパーツと体にはわずかに隙間があるため、そこに影が出来て、室用のない立体感が生まれています。
+                                これを消すには、致傷のオブジェクトを選択して、オブジェクトプロパティの中の「可視性」の中から
+                                「レイの可視性」の中のカメラ以外のチェックをすべて外します。
+                                これで変な立体感が消え、カービーの完成です。 
+                            </p>
+                        </div>
+                        <img src="image1/bityousei.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>19. 撮影セッティング（カメラ）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">カメラを追加する</p>
+                            <p>shift+Aからカメラを追加します。
+                                オブジェクトプロパティタブから、X回転を90にしてそのほかは0にします。
+                                カメラ用のウインドウを作ります。左上にカーソルをもって行き、十字になったら右にドッラクします。
+                                左のウインドウにカーソルを合わせテンキーの0番を押すと、カメラからのビューになります。
+                                右のウインドウのカメラを選択して、GYキーで前に移動させます。
+                                左のカメラビューを見ながらちょうどいい位置を探します。
+                                カメラプロパティから焦点距離を変えることが出来ます。
+                                3Dビューと同じ見え方で撮影したい場合は、ここを150mmにします。                        
+                            </p>
+                        </div>
+                        <img src="image1/settingu.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>20. 撮影セッティング（背景1）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">背景を作る</p>
+                            <p> 平面を追加して、X軸に90度回転させます。
+                                GYで後ろに移動させて、Sキーで大きくさせます。<br>
+                                マテリアルを設定します。カービーに合いそうな色にします。                       
+                            </p>
+                        </div>
+                        <img src="image1/mh2.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>21. 撮影セッティング（背景２・星）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">背景の星を作る</p>
+                            <p>一旦今あるオブジェクトは非表示にします。
+                                shift+Aから円を追加します。頂点数を10にして、フィルタイプを三角にします。
+                                編集モードに入り、テンキーの7番で上からのビューにします。
+                                Altキーを押しながら外側の頂点を選択すると、一周すべての頂点を選択できます。
+                                この状態で、左上の選択メニューから、「チェッカー選択解除」を使うと、一つ飛ばしで、挑戦を選択できます。
+                                そのままの状態で、Sキーで内側にスケールさせます。                        
+                            </p>
+                        </div>    
+                        <img src="image1/mh1.jpg" alt="" width="500px">
+                        <div class="yohaku">
+                            <p>テンキー1番で正面ビューにします。                    
+                                Aキーで全選択します。EZキーを押し、z軸上に厚みを付けます。
+                                上下中心の頂点を選択して、SZでスケールします。
+                                オブジェクトモードに戻り、ベベルモディファイアをかけます。
+                                量は0.03ぐらいにします。
+                                サブディビジョンをかけます。
+                                右クリックでスムースシェードをかけます。                        
+                            </p>
+                        </div>
+                        <img src="image1/mh3.jpg" alt="" width="500px">
+                        <div class="yohaku">
+                            <p>GXで横のほうに移動させます。オブジェクトを表示させます。</p> 
+                        </div>                   
+                        <img src="image1/mh4.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>22. 撮影セッティング（背景3・背景・星）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">背景と星を合体させる</p>
+                            <p>背景の平面をshift+Dで複製して、少し前に移動させます。</p>
+                        </div>                
+                        <img src="image1/mh6.jpg" alt="" width="500px">
+                        <div class="yohaku">
+                            <P>ジオメトリノードエディターを出します。複製した平面を選択した状態で、新規をクリックします。</P> 
+                        </div>               
+                        <img src="image1/mh5.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>23. 撮影セッティング（背景3・星2）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">星を複製する</p>
+                            <p> 追加からポイント配置を出します。
+                                ポアソンディスクにします。
+                                ディスタンスを1、デンシティを10ぐらいにします。
+                                この粒粒の場所に星が配置されます。                       
+                            </p>
+                        </div>
+                        <img src="image1/haikei_hos_hukusei.png" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>24. 撮影セッティング（背景3・星3）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">複製した星の位置を設定する</p>
+                            <p>追加からポイントインスタンスを追加します。スポイトで星を選択します。
+                                このままだと多きすぎるので、スケールをランダム化します。
+                                属性ランダム化を追加します。
+                                属性の項目に英語でscaleと入力します。
+                                最少を0.1、最大を0.25ぐらいにします。
+                                さらにもう一つ属性ランダム化をつ以下します。
+                                floatをベクトルに変えて、属性にはrotationと入れます。                       
+                            </p>
+                        </div>
+                        <img src="image1/hukusei_hosi2.png" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>25. 撮影セッティング（背景４）</h3>
+                        <div class="yohaku">
+                            <p class="mt2"> 背景にマテリアルを設定する</p>
+                            <p>数値はこのように入れます。すべて完成です。</p>
+                        </div>                       
+                        <img src="image1/mh7.jpg" alt="" width="500px">
+                        <img src="image1/mh8.jpg" alt="" width="500px">
+                        <img src="image1/mh10.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentD">
+                        <h3>26. レンダリング</h3>
+                        <div  class="yohaku">
+                            <p class="mt2">画像をレンダリングする</p>
+                            <p>これで完成です。</p>
+                        </div>                       
+                        <img src="image1/kanserei.jpg" alt="" width="500px">
+                    </div>
+                </srction>
+                
+                
+                <section class="section3">
+                    <div class="midasi">
+                        <h2 class="heading-22"><a id="用語">blenderやアバター制作で使われる用語解説</a></h2>
+                    </div>
+                    
+                    <div class="contentE">
+                        <h3>1. モデリング(Modering)</h3>
+                        <div class="yohaku">
+                            <p class="mt2">
+                                画面内の仮想空間で、モデル（物体）の形状を作り上げていく作業のこと。<br>
+                                モデリングのやり方として、ポリゴンと呼ばれる三角形面あるいは四角形面を組み合わせて形状を作り上げていく。
+                                現在最もポピュラーなモデリングと、工業製品の設計などに用いられるスプライン曲線を利用して形状を作り上げるスプライシング
+                                モデリングが主に上げられる。Blenderは両方ともに対応している。
+                            </p>
+                        </div>
+                        <img src="image1/modering1.jpg" alt="" width="250px">
+                    </div>
+                    
+                    <div class="contentE">
+                        <h3>2. マテリアル（Material）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">
+                                モデルに対して色や光沢など表面材質（マリアテル）を設定していくこと。<br>
+                                透明度や反射率、屈折率、自己発光など細かな設定をすること。
+                                また、blenderでは、フォトリアルな人間の肌や大理石といった半透明な物体を表現する
+                                SSS（サブ・サーフェイス・スキャッタリング）機能が搭載されている。
+                            </p>
+                        </div>
+                        <img src="image1/material1.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentE">
+                        <h3>3. 	テスクチャマッピング（Texture mapping）</h3>
+                        <div class="yohaku">
+                            <p class="mt2">
+                                マテリアルだけでは表現できない絵柄などを、画像テクスチャとしてモデルに張り付けること。<br>
+                                また、ディディールの作りこみを行うことが出来る。
+                                さらに絵柄として画像を張り付けるだけでなく、モデリングでは表現が難しい細かい凸凹を疑似的に表現したり、
+                                モデルを部分的に透明にしたり、光沢の有無を部分的にコントロールすることも可能である。
+                            </p>
+                        </div>
+                        <img src="image1/tesukutyamappingu1.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentE">
+                        <h3>4.	レンダリング（Rendering）</h3>
+                        <div class="yohaku">
+                            <P class="mt2">
+                                画面内の仮想3D空間で制作したモデルを、撮影するように画像として書き出すこと。<br>
+                                実際の撮影と同じくカメラのアングルや画角、背景の処理など細かな設定を行うことが出来る。
+                                また、作品の雰囲気やテイストなどを左右するライティングの機能も搭載されている。
+                                さらに、奥行き感のあるシーンを再現できる被写界深度の定、光があふれ出ているようなブルームエフェクトなど、
+                                様々な効果を加えることが出来る。
+                            </P>
+                        </div>
+                    </div>
+                    
+                    <div class="contentE">
+                        <h3>5.	アニメーション(Animation)</h3>
+                        <div class="yohaku">
+                            <p class="mt2">
+                                静止画だけでなく、移動や回転などによる動画として書き出すこと。
+                                移動や回転などの単純なアニメーションから、ラインに沿って移動するパスアニメーション、
+                                マテリアルで設定した色を時間の経過とともに変化させるなど、様々なアニメーションを設定できる。
+                                また、高速で移動する物体の残像を表示させるモーションブラーなど、アニメーションにエフェクトを付けることが出来る。                    
+                            </p>
+                        </div>
+                        <p><a href="https://youtu.be/WMEsCBe4V2k">資料</a></p>
+                    </div>
+                    
+                    <div class="contentE">
+                        <h3>6. シミュレーション(Simulation)</h3>
+                        <div class="yohaku">
+                            <p class="mt2">
+                                力学を用いた流体や風、煙、重力、摩擦などの物理シミュレーションを行うこと。<br>
+                                物体の硬さや重さといった細かな設定を行うことで、非常にリアリティのある永代や布などを表現できる。
+                                また、各種用意されているプリセットを利用すれば、難しい設定を行わずにシミュレーションを試すことが出来る。
+                            </p>
+                        </div>
+                        <img src="image1/syumiresyon1.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentE">
+                        <h3>7. スカルプト(Sculpt)</h3>
+                        <div class="yohaku">
+                            <p class="mt2">
+                                モデリング方法の一種で、粘土細工のようにモデルをマウスポインターでなぞることで、凹凸をつけ、造形を行う機能のこと。<br>
+                                球体などの短銃な形状から人間などの複雑な形状を造形することが可能。
+                                しかし、通常のモデリングでベースとなる形状を作成し、それに対してスカルプトで、ディテールの作りこみを行う方法もある。
+                            </p>
+                        </div>
+                        <img src="image1/sukaluputo1.jpg" alt="" width="500px">
+                    </div>
+                    
+                    <div class="contentE">
+                        <h3>8.	パーティクル(Particle)</h3>
+                        <div class="yohaku">
+                            <p class="mt2"> 
+                                パーティクルとは、発生源として設定したオブジェクトから大量の粒子を発生させることが出来る機能。<br>
+                                それら粒子の形状を変更することで髪の毛を表現することが出来る。
+                                さらに、Blenderでは、パーティクルで生成した髪の毛をくしでとかして整えたり、
+                                カットして長さを調整したり、ヘアースタイリングを行うことが出来る。
+                            </p>
+                        </div>
+                        <img src="image1/particlu.jpg" alt="" width="500px">
+                    </div>
+                </section>            
+            </main>
+            <footer>
+                <p>
+                    <small>Copyright &copy; 2024 sample site.All rights reserved.</small>
+                </p>
+            </footer>
+        </body>
+        </html>

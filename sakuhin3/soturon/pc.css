@@ -1,0 +1,292 @@
+    @charset "UTF-8";
+/*全体
+---------------------------------------------------------------*/
+*{
+	margin:0px;
+	padding:0;
+}
+body{
+    font-family: "Yu Gothic Medium","游ゴシック Medium",YuGothic,"游ゴシック体","ヒラギノ角ゴ Pro W3",sans-serif;
+	line-height: 1.7;
+	color: #432;
+    
+}
+main{
+    margin: 0 30px 30px;
+    width: calc(100% - 260px);
+}
+a:link{
+    color: black;
+}
+a:visited{
+    color:#c951b7;
+}
+a:hover{
+    color: blue;
+}
+.midasi{
+    margin-bottom: 15px;
+}
+.section1{
+    margin-bottom: 15px;
+}
+.section2{
+    margin-bottom: 15px;
+}
+.section3{
+    margin-bottom: 15px;
+}
+/*h1見出し
+---------------------------------------------------------------*/
+.heading {
+    padding: 0 2em 20px;
+    margin: 15px;
+    font-size: 40px;
+    background-image: repeating-linear-gradient(-45deg,#66c9dbf4 0px, #66c9dbf4 2px, rgba(0 0 0 / 0) 0%, rgba(0 0 0 / 0) 50%);
+    background-size: 8px 8px;
+    background-repeat: repeat-x;
+    background-position: center bottom;
+  }
+  /*目次
+-------------------------------------------------------------*/
+.mokuzi {
+    background: white;
+    box-shadow: 0px 0px 0px 10px white;
+    border: dashed 2px #66c9dbf4;
+    border-radius: 9px;
+    margin: 15px;
+    padding: 0.5em 0.5em 0.5em 2em;
+}
+.li{
+    margin-left: 25px;
+}
+/*header
+----------------------------------------------------------*/
+.logo{
+	width: 70px;
+	
+}
+
+header{
+    background-image: url(linkedin_banner_image_1.png) ;
+    background-size: cover;
+    height: 80px;
+    position: fixed;
+    right: 0;
+}
+.menu-content{
+    top: 0;
+    padding: 0 0 10px 0;
+}
+.menu-content{
+    padding: 0.5em 0.5em 0.5em 2em;
+}
+.menu-ul li {
+    list-style: none;
+}
+.button-49 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    margin: 10px auto;
+    padding: .8em 1em;
+    border: 2px solid #fff;
+    border-radius: 8px 0px 0px 8px  ;
+    background-color:#66c9dbf4;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8em;
+}
+
+.button-49::after {
+    transform: rotate(45deg);
+    width: 5px;
+    height: 5px;
+    margin-left: 10px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    content: '';
+}
+/*h2見出し
+-----------------------------------------------------------*/
+.heading-22 {
+    padding: .5em .7em;
+    border-left: 5px solid #66c9dbf4;
+    background-color: #f2f2f2;
+    color: black;
+}
+
+h2.mt1:before {
+	content:'●';
+    color: #66c9dbf4;
+}
+/*ハンバーガーメニュー
+-------------------------------------------------------*/
+input{
+    display: none;
+}
+/*footer
+---------------------------------------------------------*/
+footer{
+    background-color: #66c9dbf4;
+    text-align: center;
+    font-size: 0.8%;
+    padding: 26px;
+}
+/*gruop1
+---------------------------------------------------------------*/
+.main_visual{
+    width: 100%;
+    height: auto;
+}
+/*section1
+--------------------------------------------------------------*/
+.content p{
+    font-size: 14px;
+}
+.content{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content-blockA{
+    float: left;
+    width: 45%;
+    margin-right: 10%;
+    min-width: 250px;
+}
+.content-blockB{
+    float: right;
+    width: 45%;
+    min-width: 250px;
+}
+.section2{
+   clear: both;
+}
+.blockA{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.blockB{
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+/*section2
+----------------------------------------------------------*/
+.contentC{
+    margin: 15px;
+}
+h3{
+    font-weight: bold;
+}
+.contentC p{
+    font-size: 14px;
+    margin-left: 10px;
+}
+/*section2.1
+-----------------------------------------------------------*/
+.s2_1{
+	width: 100%;
+	height: 40%;
+	margin-bottom: 15%;
+}
+.g2_1{
+	margin: 20px;
+}
+.img1{
+	float: left;
+	margin-right: 20px;
+}
+#p2_1{
+	clear: both;
+}
+.p2_1{
+    font-size: 14px;
+}
+/*section2_2
+-------------------------------------------------------------------*/
+.s2_2{
+	width: 100%;
+	height: 40%;
+	margin-bottom: 15%;
+}
+.g2_2{
+	margin: 20px;
+}
+.img2{
+	float: left;
+	margin-right: 20px;
+
+}
+#p2_2{
+	clear: both;
+}
+.P2_2{
+    font-size: 14px;
+}
+/*section2_3
+----------------------------------------------------------------*/
+.s2_3{
+	width: 100%;
+	height: 40%;
+	margin-bottom: 15%;
+}
+.g2_3{
+	margin: 20px;
+}
+.img3{
+	float: left;
+	margin-right: 20px;
+
+}
+#p2_3{
+	clear: both;
+}
+.p2_3{
+    font-size: 14px;
+}
+/*section2_4
+----------------------------------------------------*/
+.s2_4{
+	width: 100%;
+	height: 40%;
+	margin-bottom: 15%;
+}
+.g2_4{
+	margin: 20px;
+}
+.img4{
+	float: left;
+	margin-right: 20px;
+ 
+}
+#p2_4{
+	clear: both;
+}
+.p2_4{
+    font-size: 14px;
+}
+/*section2_5_1
+-------------------------------------------------------*/
+ol{
+    margin: 20px;
+}
+p.mt2:before {
+	content:'■';
+    color: #66c9dbf4;
+}
+.contentD{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
+.yohaku{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+/*section3
+--------------------------------------------------*/
+.contentE{
+    margin-top: 35px;
+    margin-bottom: 35px;
+}
