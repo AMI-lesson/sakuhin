@@ -1,22 +1,4 @@
-$(function () {
-	//ナビゲーション開閉
-	if($("#navControl a").attr("class") == "close"){
-			$(".l-header__nav").css("display","none");
-		}
-
-	/*slide menu*/
-	$("#navControl a").click(function(){
-		if($(this).attr("class") == "close"){
-			$(".l-header__nav").slideDown("fast");
-			$(this).removeClass();
-			$(this).addClass("active");
-		}
-		else{
-			 $(".l-header__nav").slideUp("fast");
-			 $(this).removeClass();
-			 $(this).addClass("close"); 
-		}
-		return false;
-	});
-
+document.querySelector("#navControl a").addEventListener("click", function (e) {
+    e.preventDefault(); // デフォルト動作を防ぐ
+    document.querySelector(".l-header__nav").classList.toggle("is-active");
 });

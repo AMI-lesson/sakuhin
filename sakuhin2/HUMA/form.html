@@ -1,18 +1,15 @@
 <!doctype html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
-  <title>お問い合わせフォーム</title>
-  <meta name="description" content="1行テキスト入力欄゙">
-  <link rel="stylesheet" href="css/pc.css" type="text/css" media="screen and (min-width: 768px)">
-  <link rel="stylesheet" href="css/sp.css" type="text/css" media="screen and (max-width: 768px)">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>お問い合わせフォーム</title>  
   <link rel="icon" type="image/png" href="favicon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/huma.css" type="text/css">
 </head>
-
 <body>
   <header class="l-header clearfix">
     <div class="l-header__inner">
@@ -34,65 +31,74 @@
     </div>
   </header>
 
-    <main>
-      <div class="h1">
-         <h1 class="formh1">お問い合わせフォーム</h1>         
-      </div>
+  <main>
+    <div class="h1">
+      <h1 class="formh1">お問い合わせフォーム</h1>         
+    </div>
 
-      <center><h4><a href="privacy.html">プライバシーポリシーはこちら</a></h4></center>
+    <h4 class="privacy-link" style="text-align: center;"><a href="privacy.html">プライバシーポリシーはこちら</a></h4>
 
-         <div class="main_contents"> 
-            <form action="aceami113@gmail.com" method="post">
-              <input type="hidden">
-              <table class="form-table">
-                <tr>
-                  <th>お名前</th>
-                  <td><input class="textbox" type="text"name="name" size="40"></td>
-                </tr>
-                <tr>
-                  <th>フリガナ</th>
-                  <td><input class="textbox" type="text"name="name2" size="40"></td>
-                </tr>
-                <tr>
-                  <th>性別</th>
-                  <td><input type="radio" name="gender" id="man" value="man">
-                  <label for="man">男性</label>
-                  <input type="radio" name="gender" id="female" value="female">
-                  <label for="female">女性</label></td>
-                </tr>
-                <tr>
-                  <th rowspan="3">住所</th>
-                  <td>郵便番号<input class="textsmall" type="text" name="zipcode" size="10"></td>
-                </tr>
-                <tr>
-                  <td>都道府県
-                    <select class="textsmall" name="divisions">
-                      <option>栃木県</option>
-                      <option>群馬県</option>
-                      <option>茨城県</option>
-                      <option>埼玉県</option>
-                      <option>東京都</option>
-                      <option>千葉県</option>
-                      <option>神奈川県</option>
-                    </select>
-                  </td>  
-                </tr>
-                <tr>
-                  <td>市区町村<br><input class="textbox" type="text" name="address" size="60"></td>            
-                </tr>
-                <tr>
-                  <th>メールアドレス</th>
-                  <td><input class="textbox" type="text" name="mail" size="35"></td>
-                </tr>
-                <tr>
-                  <th>お問い合わせ内容</th>
-                  <td><textarea class="textbox" id="message" cols="35" rows="15"></textarea> </td>
-                </tr>
-              </table>      
-            <p class="submit"><input  type="submit"  class="button"  value="送信する"></p>
-        </form>
-        </div>
+    <section class="l-section">
+      <h2 class="l-section__heading text-center">お問い合わせ</h2>
+      <form action="aceami113@gmail.com" method="post">
+        <input type="hidden">
+        <figure class="l-item__figure">
+          <table class="l-item__table">
+            <tr>
+              <th><label for="name">お名前</label></th>
+              <td><input class="l-input__textbox" id="name" type="text" name="name" size="40"></td>
+            </tr>
+            <tr>
+              <th><label for="name2">フリガナ</label></th>
+              <td><input class="l-input__textbox" id="name2" type="text" name="name2" size="40"></td>
+            </tr>
+            <tr>
+              <th>性別</th>
+              <td>
+                <input type="radio" name="gender" id="man" value="man">
+                <label for="man">男性</label>
+                <input type="radio" name="gender" id="female" value="female">
+                <label for="female">女性</label>
+              </td>
+            </tr>
+            <tr>
+              <th rowspan="3">住所</th>
+              <td>郵便番号<input class="l-input__textsmall" type="text" name="zipcode" size="10"></td>
+            </tr>
+            <tr>
+              <td>都道府県
+                <select class="l-input__textsmall" name="divisions">
+                  <option>栃木県</option>
+                  <option>群馬県</option>
+                  <option>茨城県</option>
+                  <option>埼玉県</option>
+                  <option>東京都</option>
+                  <option>千葉県</option>
+                  <option>神奈川県</option>
+                </select>
+              </td>
+            </tr>
+            <tr>
+              <td>市区町村<br><input class="l-input__textbox" type="text" name="address" size="60"></td>
+            </tr>
+            <tr>
+              <th><label for="mail">メールアドレス</label></th>
+              <td><input class="l-input__textbox" id="mail" type="text" name="mail" size="35"></td>
+            </tr>
+            <tr>
+              <th><label for="message">お問い合わせ内容</label></th>
+              <td><textarea class="l-input__textbox" id="message" cols="35" rows="15"></textarea></td>
+            </tr>
+          </table>
+        <figcaption class="l-item__caption">
+          <p class="l-submit"><input type="submit" class="l-button" value="送信する"></p>
+        </figcaption>
+        </figure>
+      </form>
+    </section>
+    
     </main>
+
     <footer>
         <p>
             <small>Copyright (C) 2024 smple site. All rights reserved.</small>
