@@ -1,190 +1,352 @@
 /* 共通部分 
 ------------------------------------------*/
-@charset "UTF-8";
-* {
-    margin: 0;
-    padding: 0;
-}
+@charset "UTF-8"; /* 文字エンコーディングを指定 */
+    * {
+        margin: 0;
+        padding: 0;
+    } /* 全要素に対してマージンとパディングをゼロに設定 */
 
-html {
-    font-size: 100%;
-}
+    html {
+        font-size: 100%; /* ルート要素のフォントサイズを100%に設定 */
+    }
 
-body {
-    font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif;
-    line-height: 1.7;
-    color: #432;
-    background-image: url(../image/background.jpg);
-    font-size: 18px; /* パソコン用の基本フォントサイズ */
-}
+    body {
+        font-family: "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ヒラギノ角ゴ Pro W3", sans-serif; /* フォントファミリー設定 */
+        line-height: 1.7; /* 行の高さを1.7に設定 */
+        color: #432; /* 文字色を指定 */
+        background-image: url(../image/background.jpg); /* 背景画像の指定 */
+        font-size: 18px; /* 基本フォントサイズを18pxに設定 */
+    }
 
-a {
-    text-decoration: none;
-}
+    a {
+        text-decoration: none; /* リンクの下線を削除 */
+    }
 
-img {
-    max-width: 100%;
-}
+    img {
+        max-width: 100%; /* 画像の最大幅を親要素に合わせる */
+    }
 
-h1, h2 {
-    text-align: center;
-    font-family: "Yusei Magic", sans-serif;
-    font-weight: 100;
-}
-.main-photo{
-    text-align: center;
-}
+    h1, h2 {
+        text-align: center; /* 見出しを中央揃え */
+        font-family: "Yusei Magic", sans-serif; /* 見出しのフォント指定 */
+        font-weight: 100; /* 見出しのフォントの太さを100に設定 */
+    }
 
-section {
-    margin: 25px;
-    padding: 5px;
-    overflow: hidden;
-    margin-bottom: 40px;
-    text-align: center;
-}
+    .main-photo{
+        text-align: center; /* メイン画像を中央揃え */
+    }
 
-a:link {
-    color: black;
-}
+    section {
+        margin: 20px; /* セクションの外側マージン */
+        padding: 5px; /* セクションの内側パディング */
+        overflow: hidden; /* コンテンツのはみ出しを隠す */
+        margin-bottom: 40px; /* セクションの下マージン */
+        text-align: center; /* セクション内のテキストを中央揃え */
+    }
 
-a:hover, a:focus, a:active {
-    color: #333;
-}
+    a:link {
+        color: black; /* 未訪問リンクの色を黒に設定 */
+    }
+
+    a:hover, a:focus, a:active {
+        color: #333; /* リンクホバー時、フォーカス時、アクティブ時の色を設定 */
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both; /* フロート解除 */
+        display: block; /* 要素をブロック表示に */
+    }
 /* header 
 --------------------------------------------*/
-.l-header {
-    background-color: #d0e39b;
-}
-
-.l-header__inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.l-header__inner__logo {
-    flex: 0 0 auto;
-}
-
-.l-header__nav {
-    margin-left: auto;
-}
-
-.l-gnav {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.l-gnav__list {
-    margin-left: 20px;
-}
-
-.l-gnav__list a {
-    text-decoration: none;
-    color: #333;
-    padding: 10px 15px;
-    font-size: 16px;
-}
-
-.l-header__close {
-    text-decoration: none;
-    font-size: 16px;
-    color: #333;
-    padding: 10px 15px;
-}
-/* フォーム */
-.l-item__table{
-    width: 100%;
-    margin: 0 auto 30px;
-    border-collapse: collapse;
-}
-
-.l-item__table th, .l-item__table td {
-    border: 1px solid rgb(83, 205, 97);
-    padding: 13px;
-}
-
-.l-item__table th {
-    background-color: rgba(100, 224, 148, 1);
-}
-
-.l-input__textbox, .l-input__textsmall{
-    font-size: 16px;
-    padding: 5px;
-    border-radius: 10px;
-    border: 1px solid rgb(83, 205, 97);
-    width: 350px;
-}
-
-.l-input__textsmall {
-    width: 140px;
-}
-
-.l-submit {
-    text-align: center;
-    margin: 20px 0 60px;
-}
-
-.l-button {
-    display: inline-block;
-    border-radius: 10px;
-    font-size: 18px;
-    text-align: center;
-    padding: 17px 40px;
-    background: rgb(83, 205, 97);
-    transition: .3s;
-    box-shadow: 6px 6px 6px #aaa;
-    border: 4px solid #fff;
-    color: #fff;
-    font-weight: 700;
-}
-
-.l-button:hover {
-    box-shadow: none;
-    color: black;
-}
-/*privacy.htmlのレイアウト
-    --------------------------------------------------------*/
-    /*プライバシーページ*/
-    .p-privacy{
-        text-align: left;
+    .l-header {
+        background-color: #d0e39b; /* ヘッダーの背景色を指定 */
+        z-index: 1000; /* 他の要素より前面に表示 */
     }
-    .privacy-link {
-        text-align: center;
+
+    .l-header__inner {
+        display: flex; /* フレックスボックスレイアウト */
+        align-items: center; /* アイテムを縦中央揃え */
+        justify-content: space-between; /* アイテムを左右に均等に配置 */
+        position: relative; /* 相対位置 */
     }
-    .p-privacy__heading, .p-privacy__title {
+
+    .l-header__inner__logo {
+        flex: 0 0 auto; /* ロゴの幅を自動調整しない */
+    }
+
+    .l-header__nav {
+        margin-left: auto; /* ナビゲーションを右寄せ */
+        z-index: 999; /* ナビゲーションをヘッダーより前面に */
+    }
+
+    .l-gnav {
+        display: flex; /* フレックスボックスレイアウト */
+        list-style: none; /* リストスタイルを削除 */
+        padding: 0;
         margin: 0;
     }
 
+    .l-gnav__list {
+        margin-left: 20px; /* メニューアイテムの左マージン */
+    }
+
+    .l-gnav__list a {
+        text-decoration: none; /* リンクの下線を削除 */
+        color: #333; /* 文字色を指定 */
+        padding: 10px 15px; /* 内側のパディング */
+        font-size: 16px; /* フォントサイズを指定 */
+    }
+
+    .l-header__close {
+        text-decoration: none; /* リンクの下線を削除 */
+        font-size: 16px; /* フォントサイズを指定 */
+        color: #333; /* 文字色を指定 */
+        padding: 10px 15px; /* 内側のパディング */
+    }
+/*footer
+----------------------------------------------------*/
+    footer {
+        background: #d0e39b; /* フッターの背景色 */
+        text-align: center; /* テキストを中央揃え */
+        padding: 26px; /* フッター内のパディング */
+        color: #432; /* フッターの文字色 */
+        font-size: 0.875rem; /* フッターのフォントサイズ */
+    }
+/* フォーム 
+--------------------------------------------------*/
+    .l-item__table {
+        width: 100%; /* テーブルの幅を100%に設定 */
+        margin: 0 auto 30px; /* テーブルの上下のマージンを設定 */
+        border-collapse: collapse; /* テーブルセルの境界線を重ねる */
+    }
+
+    .l-item__table th, .l-item__table td {
+        border: 1px solid rgb(83, 205, 97); /* テーブルセルの境界線を設定 */
+        padding: 13px; /* テーブルセル内のパディング */
+    }
+
+    .l-item__table th {
+        background-color: rgba(100, 224, 148, 1); /* ヘッダーセルの背景色 */
+    }
+
+    .l-input__textbox, .l-input__textsmall {
+        font-size: 16px; /* 入力フィールドのフォントサイズ */
+        padding: 5px; /* 内側のパディング */
+        border-radius: 10px; /* 角を丸く */
+        border: 1px solid rgb(83, 205, 97); /* 枠線の色を指定 */
+        width: calc(100% - 12px); /* 幅を調整 */
+    }
+
+    .l-input__textsmall {
+        width: 140px; /* 小さな入力フィールドの幅を指定 */
+    }
+
+    .l-submit {
+        text-align: center; /* サブミットボタンを中央揃え */
+        margin: 20px 0 60px; /* 上下マージンを設定 */
+    }
+
+    .l-button {
+        display: inline-block; /* ボタンをインラインブロックに */
+        border-radius: 10px; /* 角を丸く */
+        font-size: 18px; /* フォントサイズを指定 */
+        text-align: center; /* テキストを中央揃え */
+        padding: 17px 40px; /* 内側のパディング */
+        background: rgb(83, 205, 97); /* 背景色を指定 */
+        transition: .3s; /* ホバー時のトランジション効果 */
+        box-shadow: 6px 6px 6px #aaa; /* ボタンに影をつける */
+        border: 4px solid #fff; /* 枠線を指定 */
+        color: #fff; /* 文字色を白に設定 */
+        font-weight: 700; /* フォントを太字に設定 */
+    }
+
+    .l-button:hover {
+        box-shadow: none; /* ホバー時に影を消す */
+        color: black; /* ホバー時の文字色を黒に */
+    }
+/*privacy.htmlのレイアウト スマホ・パソコン共通
+    --------------------------------------------------------*/
+    /*プライバシーページ*/
+    .p-privacy {
+        text-align: left; /* テキストを左揃え */
+    }
+    
+    .privacy-link {
+        text-align: center; /* リンクを中央揃え */
+    }
+    
+    .p-privacy__heading, .p-privacy__title {
+        margin: 0; /* 見出しのマージンをゼロに */
+    }
+    
     .l-privacy-7 ol {
-        margin-left: 20px;
+        margin-left: 20px; /* 順序付きリストの左マージン */
     }
-
-    .l-privacy-7 li, .l-privacy-list-li,
-    .p-privacy__list-ol, .p-privacy__list-item-ol {
-        margin-bottom: 10px;
-        font-size: 13px;
+    
+    .l-privacy-7 li, .l-privacy-list-li, .p-privacy__list-ol, .p-privacy__list-item-ol {
+        margin-bottom: 10px; /* リストアイテムの下マージン */
+        font-size: 13px; /* フォントサイズを小さく */
     }
-
+    
     .p-privacy__list-item-ul {
-        margin-left: 40px;
+        margin-left: 40px; /* リストアイテムの左マージン */
+    }
+    
+    .p-privacy__list-item {
+        text-align: left; /* リストアイテムのテキストを左揃え */
     }
 
-    .p-privacy__list-item{
+/* スマホ用 (max-width: 767px) 
+-------------------------------------------------------------*/
+@media (max-width: 1200px) {
+    /* スマホ共通部分 ヘッダー 
+    ---------------------------------------header-Small*/
+    .l-header{
+        background: #d0e39b;
+        height: 63px;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        position: relative;
+    }
+    .l-header__inner{
+        position: relative;
+    }
+
+    /*navigation-Small
+    -------------------------------------------*/
+    #navControl a {
+        display: inline-block;
+        width: 62px;
+        height: 26px;
+        overflow: hidden;
+    }
+
+    #navControl a.active{
+        background-position: 0 -44px;
+    }
+    .l-gnav__list a {
+        width: 100%;
+        font-size: 20px;
+        padding: 15px 20px;
+        color: #333;
+        text-decoration: none;
+        background: #d0e39b;
+        border-radius: 5px;
+        display: block;
+    }
+    .l-header__nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(208, 227, 155, 0.95);
+        display: none; /* 初期状態では非表示 */
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 99;
+    }
+    
+    .l-header__nav.is-active {
+        display: flex; /* クラスが付与されたら表示 */
+    }
+    
+
+    /* メニュー項目 */
+    .l-gnav {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .l-gnav__list {
+        width: 100%;
+        text-align: center;
+    }
+
+    
+    .l-gnav__list a:hover {
+        background: #b8d080;
+    }
+
+    /* 表のレイアウト */
+    table {
+        margin: auto;
+        width: 260px;
+        border-collapse: collapse;
+    }
+
+    th, td {
+        border: 1px solid rgb(83, 205, 97);
+        padding: 10px;
+        font-size: 1.125rem;
+    }
+
+    th {
+        background-color: rgba(100, 224, 148, 1);
+        text-align: center;
+    }
+
+    td {
         text-align: left;
+        background-color: white;
     }
 
-/* footer 
------------------------------------------*/
-footer {
-    background: #d0e39b;
-    text-align: center;
-    padding: 26px;
-    color: #432;
-    font-size: 0.875rem;
+    .text-center {
+        text-align: center;
+    }
+
+    /* Google Map レイアウト */
+    .location-map, .p-privacy__title {
+        text-align: center;
+    }
+
+    .shop-table {
+        width: 100%;
+        margin: auto;
+    }
+
+    .shop-map {
+        margin: auto;
+    }
+
+    .shop-map iframe {
+        width: 100%;
+        height: 400px;
+        border: none;
+    }
+
+    /*gridのレイアウト*/
+    .l-section__heading {
+        font-size: 1.5rem;
+    }
+
+    .l-section__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* スマホでは2列に */
+        gap: 10px; /* アイテム間の間隔を調整 */
+        width: 100%; /* 親要素の幅を指定 */
+        margin: auto;
+    }
+
+    .l-grid__img {
+        height: 180px; /* 画像の高さを統一 */
+        width: 260px;
+        object-fit: cover; /* 画像が切れずにフィット */
+    }
+
+    figcaption {
+        font-size: 1rem;
+    }
 }
+
 /* パソコン用 (min-width: 1200px) 
 -------------------------------------------------------------*/
 @media (min-width: 1200px) {
@@ -356,145 +518,5 @@ footer {
         text-align: left;
     }
 }
-/* スマホ用 (max-width: 767px) 
--------------------------------------------------------------*/
-@media (max-width: 1200px) {
-    /* スマホ共通部分 ヘッダー */
-    #navControl {
-        position: absolute;
-        left: 87%; /* ロゴの左側 */
-        top: 5%;
-        transform: translateY(-50%);
-        z-index: 100;
-    }
 
-    #navControl a {
-        display: inline-block;
-        overflow: hidden;
-    }
-
-    /* ドロワーメニューの初期状態 */
-    .l-header__nav {
-        position: fixed;
-        top: -100vh; /* 画面外に隠す */
-        left: 0;
-        width: 100%;
-        height: auto; /* メニューの高さを可変にする */
-        background: #d0e39b;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        transition: top 0.3s ease-in-out;
-        z-index: 99;
-        padding: 20px 0; /* メニュー上下に余白を追加 */
-    }
-
-    /* ドロワーメニューの表示時 */
-    .l-header__nav.is-active {
-        top: 63px; /* ヘッダーの高さに合わせる */
-    }
-
-    /* メニューリストのスタイル */
-    .l-gnav {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        display: flex;
-        flex-direction: column; /* 縦並びにする */
-        align-items: center; /* 中央寄せ */
-    }
-
-    /* メニュー項目のスタイル */
-    .l-gnav__list {
-        padding: 10px 0; /* 均等な間隔を確保 */
-        width: 100%;
-        text-align: center;
-    }
-
-    .l-gnav__list a {
-        font-size: 20px;
-        padding: 15px 20px;
-        color: #333;
-        text-decoration: none;
-        background: #d0e39b;
-        border-radius: 5px;
-        display: block;
-        text-align: center;
-        width: 80%;
-        transition: background 0.3s ease;
-    }
-
-    .l-gnav__list a:hover {
-        background: #b8d080;
-    }
-
-    /* 表のレイアウト */
-    table {
-        margin: auto;
-        width: 260px;
-        border-collapse: collapse;
-    }
-
-    th, td {
-        border: 1px solid rgb(83, 205, 97);
-        padding: 10px;
-        font-size: 1.125rem;
-    }
-
-    th {
-        background-color: rgba(100, 224, 148, 1);
-        text-align: center;
-    }
-
-    td {
-        text-align: left;
-        background-color: white;
-    }
-
-    .text-center {
-        text-align: center;
-    }
-
-    /* Google Map レイアウト */
-    .location-map, .p-privacy__title {
-        text-align: center;
-    }
-
-    .shop-table {
-        width: 100%;
-        margin: auto;
-    }
-
-    .shop-map {
-        margin: auto;
-    }
-
-    .shop-map iframe {
-        width: 100%;
-        height: 400px;
-        border: none;
-    }
-
-    /*gridのレイアウト*/
-    .l-section__heading {
-        font-size: 1.5rem;
-    }
-
-    .l-section__grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); /* スマホでは2列に */
-        gap: 10px; /* アイテム間の間隔を調整 */
-        width: 100%; /* 親要素の幅を指定 */
-        margin: auto;
-    }
-
-    .l-grid__img {
-        height: 180px; /* 画像の高さを統一 */
-        width: 260px;
-        object-fit: cover; /* 画像が切れずにフィット */
-    }
-
-    figcaption {
-        font-size: 1rem;
-    }
-}
+    
